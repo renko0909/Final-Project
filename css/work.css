@@ -1,0 +1,130 @@
+body {
+	margin: 0;
+	font-family: Tahoma, Verdana, Segoe, sans-serif;
+	position: fixed;
+}
+@keyframes typing { from { width: 0; } }
+@keyframes caret { 50% { border-color: transparent; } }
+
+.container {
+/*  margin: 0;*/
+  position: relative;
+  width: 150px;
+  height: 725px;
+  background: #363535;
+}
+.contents h4 {
+	margin: 0;
+}
+.contents {
+  position: relative;
+  color:#EEAE8B;
+  font-family: Didot-Bold;
+  font-size: 120px;
+  width: 11ch;
+  border-right: .08em solid;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 5s steps(11, end), caret .5s step-end infinite;
+}
+
+.work1 {
+	position: relative;
+	width: 400px;
+	height: auto;
+	top: -850px;
+	left: 250px;
+}
+.work2 {
+	position: relative;
+	width: 400px;
+	height: auto;
+	top: -550px;px;
+	left: -80px;
+}
+.work3 {
+	position: relative;
+	width: 400px;
+	height: auto;
+	top: -600px;
+	left: -150px;
+}
+/*===========nav==============*/
+.nav {
+	float:right;
+	margin-right: -50px;
+	margin-top: 20px;
+}
+
+.hamburger-menu div {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  transition: .5s;
+  /* アニメーションの時間を0.5秒に指定 */
+  transform:scale(1,1);
+  /* XY軸(横縦)の伸縮率を指定 */
+}
+.hamburger-menu:hover div {
+  opacity:0.6;
+  /* 透明度を指定 */
+  margin: 8px 0;
+  transform:scale(1.1,1.1);
+  /* XY軸(横縦)の伸縮率を指定 */
+}
+.hamburger-menu + .sidenavs:target {
+  overflow-x: visible;
+  /* ボックスからはみ出る箇所をそのまま表示 */
+  width: 100%;
+  display:block;
+}
+.sidenavs:target {
+  overflow-x: hidden;
+  /* ボックスからはみ出る箇所を隠す */
+  width: 0;
+}
+/* ハンバーガーメニュー表示時 */
+.sidenavs {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  /* 画像の配置を指定 */
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  /* 横スクロールを無効にする */
+  padding-top: 60px;
+  transition: 0.5s;
+  /* アニメーションの時間を0.5秒に指定 */
+}
+/* ハンバーガーメニュー表示時のリンク */
+.sidenavs a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  /* アニメーションの時間を0.3秒に指定 */
+  font-weight:bold;
+  transform:rotate(0deg);
+  /* XY軸(横縦)の回転角度を指定 */
+}
+/* マウスオーバー後のリンク */
+.sidenavs a:hover {
+  color: white;
+  transform:rotate(5deg);
+  /* XY軸(横縦)の回転角度を指定 */
+}
+/* クローズボタン */
+.sidenavs .close-btn {
+  position: absolute;
+  /* 親要素との絶対位置を指定 */
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}

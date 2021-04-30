@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  /*position: fixed;*/
+}
+.container {
+  margin: 0;
+  position: relative;
+  width: 150px;
+  height: 1000px; /*725*/
+  background: #363535;
+}
+.contents h4 {
+  margin: 0;
+
+}
+.contents {
+  position: absolute;
+  color:#EEAE8B;
+  font-family: Didot-Bold;
+  font-size: 115px;
+  left: 20px;
+}
+img {
+  position: absolute;
+    border-radius: 50%;
+    width:  180px;
+    height: 180px;
+}
+.about-images {
+  margin-left: 550px;
+}
+.about-me {
+  position: absolute;
+  margin-right: 5000px;
+}
+.intro {
+  padding-top: 210%;
+  padding-left: 405%;
+}
+.intro1 {
+  padding-top: 40%;
+  padding-left: 405%;
+  font-family: Didot-Bold;
+  font-size: 30px;
+  color:#EEAE8B;
+}
+.intro h3 {
+  color:#EEAE8B;
+  font-family: Didot-Bold;
+  font-size: 40px;
+}
+.intro-lorem {
+  width: 700px;
+  margin-left: 320px;
+  text-align:center;
+}
+.tell {
+  position: relative;
+  margin-left: 430px;
+  margin-top: 50%;
+}
+.tell h3 {
+  width: 500px;
+  color:#EEAE8B;
+  text-align: center;
+}
+/*============icons=============*/
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-left: 430%;
+
+}
+.fa:hover {
+  opacity: 0.7;
+}
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  margin-left: 500px;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  position: absolute;
+  margin-top: -55px;
+}
+.fa-instagram {
+  background: #ff5200;
+  color: white;
+  position: absolute;
+  margin-left: 790px;
+  margin-top: -55px; 
+
+}
+/*---------------nav-----------------*/
+.nav {
+  float:right;
+  margin-right: 1%;
+}
+
+.hamburger-menu div {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  transition: .5s;
+  /* アニメーションの時間を0.5秒に指定 */
+  transform:scale(1,1);
+  /* XY軸(横縦)の伸縮率を指定 */
+}
+.hamburger-menu:hover div {
+  opacity:0.6;
+  /* 透明度を指定 */
+  margin: 8px 0;
+  transform:scale(1.1,1.1);
+  /* XY軸(横縦)の伸縮率を指定 */
+}
+.hamburger-menu + .sidenavs:target {
+  overflow-x: visible;
+  /* ボックスからはみ出る箇所をそのまま表示 */
+  width: 100%;
+  display:block;
+}
+.sidenavs:target {
+  overflow-x: hidden;
+  /* ボックスからはみ出る箇所を隠す */
+  width: 0;
+}
+/* ハンバーガーメニュー表示時 */
+.sidenavs {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  /* 画像の配置を指定 */
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  /* 横スクロールを無効にする */
+  padding-top: 60px;
+  transition: 0.5s;
+  /* アニメーションの時間を0.5秒に指定 */
+}
+/* ハンバーガーメニュー表示時のリンク */
+.sidenavs a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  /* アニメーションの時間を0.3秒に指定 */
+  font-weight:bold;
+  transform:rotate(0deg);
+  /* XY軸(横縦)の回転角度を指定 */
+}
+/* マウスオーバー後のリンク */
+.sidenavs a:hover {
+  color: white;
+  transform:rotate(5deg);
+  /* XY軸(横縦)の回転角度を指定 */
+}
+/* クローズボタン */
+.sidenavs .close-btn {
+  position: absolute;
+  /* 親要素との絶対位置を指定 */
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
